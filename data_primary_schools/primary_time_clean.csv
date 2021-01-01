@@ -1,4 +1,4 @@
-female_prop_per_calss,year,ratios,ratios_count,schools_char,char_count,teachers_gender,teachers_gender_count,pupils_gender,pupils_gender_count
+female_prop_per_calss,year,ratios,ratios_value,schools_char,char_count,teachers_gender,teachers_gender_count,pupils_gender,pupils_gender_count
 44.1,1985,pupil_to_class,32.9,taught_classes,37705,teachers_female,13150,pupils_female,546089
 44.1,1985,pupil_to_class,32.9,taught_classes,37705,teachers_female,13150,pupils_male,692879
 44.1,1985,pupil_to_class,32.9,taught_classes,37705,teachers_female,13150,pupils_all,1238968

@@ -1,19 +1,21 @@
+# reading the rds file of the states data
+
+library(tidyverse)
+
+primary_state <- read_rds("data_primary_schools/raw_data/primary_state_raw.rds")
 # cleaning the data extracted
-
-source("extracting.R")
-
 
 primary_state_ready <- primary_state[[1]] %>% 
   .[-c(1:7,9,29,36),] %>%
   as_tibble() %>%
   separate(V1, sep= " ", 
-           into = c("avg_pupil_to_teacher",
+           into = c("pupil_to_teacher",
                     "teachers_female",
                     "teachers_all",
                     "pupils_female_prop",
                     "pupils_female",
                     "pupils_all",
-                    "avg_pupil_to_class",
+                    "pupil_to_class",
                     "number_taught_classes")) %>%
   rename(number_classerooms = "V2",
          number_schools = "V3") %>%
@@ -38,10 +40,10 @@ primary_state_ready <- primary_state_ready %>%
 ################################################################################
 
 primary_state_clean <- primary_state_ready %>%
-  pivot_longer(cols = c("avg_pupil_to_teacher", 
-                        "avg_pupil_to_class"),
+  pivot_longer(cols = c("pupil_to_teacher", 
+                        "pupil_to_class"),
                names_to = "ratio", 
-               values_to = "avg_value") %>% 
+               values_to = "ratios_value") %>% 
   pivot_longer(cols =  number_taught_classes:number_schools,
                names_to = "schools_char",
                values_to = "char_count") %>%

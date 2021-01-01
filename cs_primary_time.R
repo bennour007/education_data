@@ -1,3 +1,12 @@
+
+# read the rds file of the time data
+
+library(tidyverse)
+
+primary_time <- read_rds("data_primary_schools/raw_data/primary_time_raw.rds")
+
+###############################################################################
+
 primary_time_ready <- primary_time[[1]] %>%
   .[-c(1:7),] %>% 
   as_tibble() %>%
@@ -24,7 +33,7 @@ primary_time_clean <- primary_time_ready %>%
   mutate(pupils_male = pupils_all - pupils_female) %>%
   pivot_longer(cols = c("pupil_to_class", "pupil_to_teacher"),
                names_to = "ratios", 
-               values_to = "ratios_count") %>%
+               values_to = "ratios_value") %>%
   pivot_longer(cols = taught_classes:number_schools,
                names_to = "schools_char",
                values_to = "char_count") %>%
