@@ -1,4 +1,4 @@
-state,ratio,ratios_value,schools_char,char_count,teachers_gender,teachers_gender_count,pupils_gender,pupils_gender_count
+state,ratios,ratios_value,schools_char,char_count,teachers_gender,teachers_gender_count,pupils_gender,pupils_gender_count
 Tunis1,pupil_to_teacher,18.5,number_taught_classes,1479,teachers_female,1685,pupils_female,19362
 Tunis1,pupil_to_teacher,18.5,number_taught_classes,1479,teachers_female,1685,pupils_all,39865
 Tunis1,pupil_to_teacher,18.5,number_taught_classes,1479,teachers_female,1685,pupils_male,20503

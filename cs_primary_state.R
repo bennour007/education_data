@@ -42,7 +42,7 @@ primary_state_ready <- primary_state_ready %>%
 primary_state_clean <- primary_state_ready %>%
   pivot_longer(cols = c("pupil_to_teacher", 
                         "pupil_to_class"),
-               names_to = "ratio", 
+               names_to = "ratios", 
                values_to = "ratios_value") %>% 
   pivot_longer(cols =  number_taught_classes:number_schools,
                names_to = "schools_char",
